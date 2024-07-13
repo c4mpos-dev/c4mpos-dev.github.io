@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* estiliza cada ancora dentro dessa div q tem como classe navbar */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+/* muda a cor do fundo ao passar o mouse */
+.navbar a:hover {
+    background-color: #575757;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: white;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 50px; /* Ajuste conforme necessário */
+    right: 0;
+    width: 50%; /* Metade direita da tela */
+}
+
+.menu a {
+    display: block;
+    text-align: center;
+}
+
+
+/* configura para celular */
+@media (min-width: 600px) {
+    .hamburger {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
+    .menu a {
+        display: inline;
+    }
+}
