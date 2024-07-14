@@ -1,28 +1,39 @@
+:root {
+    --base-color: #6c757d;
+    --secondary-color: #495057;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: var(--base-color);
+}
+
+.navbar-conatiner{
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    position: relative;
+    padding: 14px 20px;
+    background-color: var(--secondary-color);
 }
 
-/* estiliza cada ancora dentro dessa div q tem como classe navbar */
 .navbar a {
     color: white;
     text-decoration: none;
+    border-radius: 10px;
     padding: 14px 20px;
 }
 
-/* muda a cor do fundo ao passar o mouse */
 .navbar a:hover {
-    background-color: #575757;
+    background-color: var(--base-color);
 }
 
 .logo {
@@ -40,11 +51,12 @@ body {
 .menu {
     display: none;
     flex-direction: column;
-    background-color: #333;
     position: absolute;
-    top: 50px; /* Ajuste conforme necessário */
+    top: 59px; /* navbar tem 60 */
     right: 0;
-    width: 50%; /* Metade direita da tela */
+    width: 50%;
+    background-color: var(--secondary-color);
+    border-radius: 0px 0px 10px 10px;
 }
 
 .menu a {
@@ -52,12 +64,35 @@ body {
     text-align: center;
 }
 
+.section {
+    height: 100vh; /* Altura de cada seção = altura total da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-/* configura para celular */
+#home {
+    background-color: #f4f4f4;
+}
+
+#servicos {
+    background-color: #ddd;
+}
+
+#sobre {
+    background-color: #bbb;
+}
+
+#contato {
+    background-color: #999;
+}
+
 @media (min-width: 600px) {
     .hamburger {
         display: none;
     }
+
     .menu {
         display: flex;
         flex-direction: row;
