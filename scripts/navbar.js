@@ -1,21 +1,19 @@
 function toggleMenu() {
     var menu = document.getElementById("menu");
-    
-    if (menu.style.display === "block") {
+    if (menu.style.display === "flex") {
         menu.style.display = "none";
     } else {
-        menu.style.display = "block";
+        menu.style.display = "flex";
     }
 }
 
-/* rolagem suave */
 function smoothScroll(event, targetId) {
     event.preventDefault();
     var target = document.querySelector(targetId);
-    var targetPosition = target.getBoundingClientRect().top;
+    var targetPosition = target.offsetTop;
     var startPosition = window.pageYOffset;
     var distance = targetPosition - startPosition;
-    var duration = 800; //  controla o tempod e rolagem (ms)
+    var duration = 800; // duração da rolagem em milissegundos
     var start = null;
 
     window.requestAnimationFrame(function step(timestamp) {
@@ -28,4 +26,3 @@ function smoothScroll(event, targetId) {
         }
     });
 }
-
