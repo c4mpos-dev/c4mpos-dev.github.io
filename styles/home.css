@@ -2,11 +2,10 @@
 
 :root {
     --font-kanit: font-family: "Kanit", sans-serif;
-    --base-color: #44989d;
+    --base-color: #555555;
     --secondary-color: linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(77,77,77,1) 50%, rgba(64,64,64,1) 100%);
     --text-color: #000000;
 }
-
 
 body {
     margin: 0;
@@ -42,11 +41,6 @@ body {
     background-color: var(--base-color);
 }
 
-.logo {
-    font-size: 1.5em;
-    color: white;
-}
-
 .hamburger {
     display: block;
     cursor: pointer;
@@ -78,7 +72,20 @@ body {
     text-align: center;
 }
 
-#home {
+.container-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    background-color: var(--base-color);
+    border-radius: 15px;
+}
+
+.text-about {
+    margin-right: 40px;
+}
+
+/* #home {
     
 }
 
@@ -92,7 +99,7 @@ body {
 
 #contato {
     
-}
+} */
 
 @media (min-width: 600px) {
     .hamburger {
