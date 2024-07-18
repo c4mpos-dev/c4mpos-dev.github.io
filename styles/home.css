@@ -1,14 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-    --base-color: #6c757d;
-    --secondary-color: #495057;
+    --font-kanit: font-family: "Kanit", sans-serif;
+    --base-color: #44989d;
+    --secondary-color: linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(77,77,77,1) 50%, rgba(64,64,64,1) 100%);
+    --text-color: #000000;
 }
 
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--base-color);
+    background: var(--secondary-color);
 }
 
 .navbar-conatiner{
@@ -26,7 +29,10 @@ body {
 }
 
 .navbar a {
-    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 10px;
     padding: 14px 20px;
@@ -73,19 +79,19 @@ body {
 }
 
 #home {
-    background-color: #f4f4f4;
+    
 }
 
 #servicos {
-    background-color: #ddd;
+    
 }
 
 #sobre {
-    background-color: #bbb;
+    
 }
 
 #contato {
-    background-color: #999;
+    
 }
 
 @media (min-width: 600px) {
