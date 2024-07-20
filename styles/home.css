@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
 
 :root {
     --font-kanit: "Kanit", sans-serif;
     --font-roboto:  "Roboto Condensed", sans-serif;
-    --base-color: #666666;
-    --secondary-color: linear-gradient(90deg, rgba(122,122,122,1) 0%, rgba(77,77,77,1) 50%, rgba(64,64,64,1) 100%);
+    --font-edu:  "Edu AU VIC WA NT Hand", cursive;
+    --base-color: #424242;
+    --secondary-color: linear-gradient(90deg, rgba(53,53,53,1) 0%, rgba(40,40,40,1) 50%, rgba(27,27,27,1) 100%);
     --text-color: #ffffff;
 }
 
@@ -22,12 +24,16 @@ body {
 
 .navbar {
     display: flex;
-    position: relative;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 20px;
-    background-color: var(--secondary-color);
-    box-shadow: 0 2px 10px rgb(41, 41, 41);
+    top: 0; /* Fixa a navbar no topo */
+    height: 80px; /* Definindo uma altura fixa para a navbar */
+    width: 100%;
+    background: linear-gradient(90deg, rgba(53,53,53,0.7) 0%, rgba(40,40,40,0.7) 50%, rgba(27,27,27,0.7) 100%);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px rgb(87, 87, 87);
+    z-index: 1;
 }
 
 .navbar a {
@@ -48,14 +54,14 @@ body {
     display: block;
     cursor: pointer;
     font-size: 1.5em;
-    color: white;
+    color: var(--text-color);
 }
 
 .menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 59px; /* navbar tem 60 */
+    top: 80px; /* navbar tem 60 */
     right: 0;
     width: 50%;
     background-color: var(--secondary-color);
@@ -68,11 +74,28 @@ body {
 }
 
 .section {
-    height: 100vh; /* Altura de cada seção = altura total da viewport */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-bottom: 2px solid var(--text-color);
+}
+
+#me{
+    height: 100vh;
+}
+
+#servicos {
+    height: 100vh;
+}
+
+#sla {
+    height: 100vh;
+}
+
+#contato {
+    height: 100vh;
 }
 
 @media (min-width: 600px) {
@@ -90,21 +113,48 @@ body {
     .menu a {
         display: inline;
     }
-
+    
     .container-about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        margin: 50px 0px 50px 0px;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        color: var(--text-color);
+    }
+    .title h1{
+        font-family: var(--font-roboto);
+        font-size: 50px;
+        margin-bottom: 5px;
+        margin-top: 0;
+        letter-spacing: 3px;
+    }
+    .title p {
+        font-family: var(--font-edu);
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .card-about {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 40px;
-        background-color: var(--base-color);
+        margin-bottom: 10px;
         border-radius: 15px;
-        border: 1px solid white;
+        background-color: var(--base-color);
+        border: 1px solid var(--text-color);    
     }
 
     .photo {
         border-radius: 150px;
         margin: 25px 0px 25px 30px;
-        border: 2px solid white;
+        border: 2px solid var(--text-color);
     }
 
     .text-about {
@@ -113,12 +163,10 @@ body {
         font-weight: 600;
         color: #ffffff;
     }
-
     .text-about h1{
         font-size: 28px;
         margin-bottom: 10px;
     }
-
     .text-about p{
         margin: 0px 0px 10px 0px;
         display: flex;
@@ -126,11 +174,9 @@ body {
         gap: 10px;
         font-size: 18px;
     }
-
     .text-about a button:hover {
         background-color: rgb(145, 145, 145);
     }
-
     .text-about a button{
         margin-top: 15px;
         display: inline-flex;
@@ -141,9 +187,8 @@ body {
         border-radius: 20px;
         padding: 7px;
         background-color: var(--base-color);
-        border: 2px solid white;
+        border: 2px solid var(--text-color);
     }
-
     .text-about a button span{
         font-family: var(--font-roboto);
         font-size: 16px;
