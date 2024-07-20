@@ -33,6 +33,7 @@ body {
     background: linear-gradient(90deg, rgba(53,53,53,0.7) 0%, rgba(40,40,40,0.7) 50%, rgba(27,27,27,0.7) 100%);
     backdrop-filter: blur(5px);
     box-shadow: 0 2px 10px rgb(87, 87, 87);
+    transition: box-shadow 0.3s ease; /* Transição suave */
     z-index: 1;
 }
 
@@ -66,6 +67,7 @@ body {
     width: 50%;
     background-color: var(--secondary-color);
     border-radius: 0px 0px 10px 10px;
+    margin-right: 20px;
 }
 
 .menu a {
@@ -79,11 +81,92 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-bottom: 2px solid var(--text-color);
+    border-bottom: 1px solid var(--text-color);
+}
+
+.container-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    margin: 15px 20px 30px 20px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+.title h1{
+    font-family: var(--font-roboto);
+    font-size: 50px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    letter-spacing: 3px;
+}
+.title p {
+    font-family: var(--font-edu);
+    margin: 0;
+    font-size: 20px;
+}
+
+.card-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--base-color);
+    border: 1px solid var(--text-color);    
+}
+
+.photo {
+    border-radius: 150px;
+    margin: 25px 0px 25px 0px;
+    border: 2px solid var(--text-color);
+}
+
+.text-about {
+    font-family: var(--font-roboto);
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0px 20px 20px 20px;
+}
+.text-about h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.text-about p{
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+}
+.text-about a button:hover {
+    background-color: rgb(145, 145, 145);
+}
+.text-about a button{
+    margin-top: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    gap: 10px;
+    border-radius: 20px;
+    padding: 7px;
+    background-color: var(--base-color);
+    border: 2px solid var(--text-color);
+}
+.text-about a button span{
+    font-family: var(--font-roboto);
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
 }
 
 #me{
-    height: 100vh;
+    min-height: calc(-80px + 100vh);
+    margin-top: 80px;
 }
 
 #servicos {
@@ -98,7 +181,7 @@ body {
     height: 100vh;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .hamburger {
         display: none;
     }
@@ -115,84 +198,24 @@ body {
     }
     
     .container-about {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 50px;
-        margin: 50px 0px 50px 0px;
-    }
-
-    .title {
-        display: flex;
-        flex-direction: column;
-        color: var(--text-color);
-    }
-    .title h1{
-        font-family: var(--font-roboto);
-        font-size: 50px;
-        margin-bottom: 5px;
-        margin-top: 0;
-        letter-spacing: 3px;
-    }
-    .title p {
-        font-family: var(--font-edu);
-        margin: 0;
-        font-size: 20px;
+        margin: 50px 0px 60px 0px;
     }
 
     .card-about {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
-        align-items: center;
-        gap: 40px;
-        margin-bottom: 10px;
-        border-radius: 15px;
-        background-color: var(--base-color);
-        border: 1px solid var(--text-color);    
+        gap: 40px;    
     }
 
     .photo {
-        border-radius: 150px;
         margin: 25px 0px 25px 30px;
-        border: 2px solid var(--text-color);
     }
 
     .text-about {
         margin-right: 40px;
-        font-family: var(--font-roboto);
-        font-weight: 600;
-        color: #ffffff;
     }
-    .text-about h1{
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-    .text-about p{
-        margin: 0px 0px 10px 0px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 18px;
-    }
-    .text-about a button:hover {
-        background-color: rgb(145, 145, 145);
-    }
+
     .text-about a button{
-        margin-top: 15px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
         width: 350px;
-        gap: 10px;
-        border-radius: 20px;
-        padding: 7px;
-        background-color: var(--base-color);
-        border: 2px solid var(--text-color);
-    }
-    .text-about a button span{
-        font-family: var(--font-roboto);
-        font-size: 16px;
-        font-weight: 500;
-        color: #ffffff;
     }
 }
