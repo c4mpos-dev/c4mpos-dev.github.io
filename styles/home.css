@@ -228,15 +228,11 @@ body {
     margin-top: 80px;
 }
 
-#servicos {
+#projects {
     height: 100vh;
 }
 
-#sla {
-    height: 100vh;
-}
-
-#contato {
+#contact {
     height: 100vh;
 }
 
