@@ -84,6 +84,65 @@ body {
     border-bottom: 1px solid var(--text-color);
 }
 
+
+
+.container-me {
+    font-family: var(--font-roboto);
+    color: var(--text-color);
+}
+
+.title-me h1{
+    font-size: 42px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.title-me p {
+    font-size: 19px;
+    margin: 15px 0px 20px 0px;
+}
+
+@keyframes pulse-glow {
+    0% {
+        transform: translateX(0);
+        text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000, 0 0 9px #ff0000, 0 0 12px #ff0000, 0 0 15px #ff0000, 0 0 18px #ff0000, 0 0 21px #ff0000;
+    }
+    33% {
+        transform: translateX(20px);
+        text-shadow: 0 0 6px #ff0000, 0 0 12px #ff0000, 0 0 18px #ff0000, 0 0 24px #ff0000, 0 0 30px #ff0000, 0 0 36px #ff0000, 0 0 42px #ff0000;
+    }
+    66% {
+        transform: translateX(-20px);
+        text-shadow: 0 0 6px #ff0000, 0 0 12px #ff0000, 0 0 18px #ff0000, 0 0 24px #ff0000, 0 0 30px #ff0000, 0 0 36px #ff0000, 0 0 42px #ff0000;
+    }
+    100% {
+        transform: translateX(0);
+        text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000, 0 0 9px #ff0000, 0 0 12px #ff0000, 0 0 15px #ff0000, 0 0 18px #ff0000, 0 0 21px #ff0000;
+    }
+}
+
+.slide-text {
+    display: inline-block;
+    animation: pulse-glow 2s infinite;
+    color: #ffffff;
+}
+
+
+.separator {
+    border: 1px solid var(--text-color);
+    margin: 0px -15px 0px -15px;
+}
+
+.container-icons-redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+/* ABOUT SECTION */
+
 .container-about {
     display: flex;
     flex-direction: column;
@@ -92,19 +151,19 @@ body {
     margin: 15px 20px 30px 20px;
 }
 
-.title {
+.title-about {
     display: flex;
     flex-direction: column;
     color: var(--text-color);
 }
-.title h1{
+.title-about h1{
     font-family: var(--font-roboto);
     font-size: 50px;
     margin-bottom: 5px;
     margin-top: 0;
     letter-spacing: 3px;
 }
-.title p {
+.title-about p {
     font-family: var(--font-edu);
     margin: 0;
     font-size: 20px;
@@ -214,8 +273,19 @@ body {
     .text-about {
         margin-right: 40px;
     }
-
     .text-about a button{
         width: 350px;
+    }
+    
+    .title-me h1{
+        font-size: 65px;
+    }
+    .title-me p {
+        font-size: 27px;
+        margin: 15px 0px 20px 0px;
+    }
+     
+    .separator {
+        margin: 0px -25px 0px -25px;
     }
 }
