@@ -84,8 +84,6 @@ body {
     border-bottom: 1px solid var(--text-color);
 }
 
-
-
 .container-me {
     font-family: var(--font-roboto);
     color: var(--text-color);
@@ -130,6 +128,7 @@ body {
 .separator {
     border: 1px solid var(--text-color);
     margin: 0px -15px 0px -15px;
+    border-radius: 10px;
 }
 
 .container-icons-redes {
