@@ -29,7 +29,7 @@ function smoothScroll(event, targetId) {
 
 function toggleBoxShadow() {
     var navbar = document.querySelector('.navbar');
-    if (window.pageYOffset === 0) {
+    if (window.pageYOffset < 10) {
         navbar.style.boxShadow = 'none';
     } else {
         navbar.style.boxShadow = '0 2px 10px rgb(87, 87, 87)';
