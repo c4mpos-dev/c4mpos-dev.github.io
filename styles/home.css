@@ -243,26 +243,55 @@ body {
 
 .email-form input, .email-form textarea {
     width: 75%;
+    resize: none;
     padding: 10px;
     background-color: var(--base-color);
-    color: var(--text-color);
     border: 1px solid var(--text-color);
     border-radius: 10px;
-    resize: none;
+    color: var(--text-color);
+    font-family: var(--font-roboto);
+    font-size: 15px;
+}
+
+.email-form input {
+    height: 35px;
+}
+
+.email-form textarea {
+    height: 120px;
+}
+
+.email-form input::placeholder, .email-form textarea::placeholder {
+    font-family: var(--font-roboto);
+    font-size: 17px;
+    color: var(--text-color);
+    padding: 0px 0px 0px 5px;
+}
+
+.email-form button:hover {
+    background-color: rgb(145, 145, 145);
 }
 
 .email-form button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007BFF;
-    color: white;
+    width: 150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 5px;
+    gap: 10px;
+    background-color: var(--base-color);
+    border: 1px solid var(--text-color);
     cursor: pointer;
+}
+
+.email-form button span {
+    font-family: var(--font-roboto);
     font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
 }
-.email-form button:hover {
-    background-color: #0056b3;
-}
+
 
 
 
@@ -335,8 +364,17 @@ body {
         margin: 0px -25px 0px -25px;
     }
 
-    .email-form input, .email-form textarea {
+    .email-form input {
         width: 20%;
+    }
+    
+    .email-form textarea {
+        width: 35%;
+    }
+
+    .email-form button {
+        width: 250px;
+        height: 40px;
     }
 
 }
