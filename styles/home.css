@@ -58,6 +58,10 @@ body {
     color: var(--text-color);
 }
 
+.logo {
+    margin-left: 5px;
+}
+
 .menu {
     display: none;
     flex-direction: column;
@@ -84,6 +88,8 @@ body {
     border-bottom: 1px solid var(--text-color);
 }
 
+/* ME SECTION */
+
 .container-me {
     font-family: var(--font-roboto);
     color: var(--text-color);
@@ -97,6 +103,26 @@ body {
 .title-me p {
     font-size: 19px;
     margin: 15px 0px 20px 0px;
+}
+
+.slide-text {
+    display: inline-block;
+    animation: pulse-glow 2s infinite;
+    color: #ffffff;
+}
+
+.separator {
+    border: 1px solid var(--text-color);
+    margin: 0px -15px 0px -15px;
+    border-radius: 10px;
+}
+
+.container-icons-redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 @keyframes pulse-glow {
@@ -116,27 +142,6 @@ body {
         transform: translateX(0);
         text-shadow: 0 0 3px #ff0000, 0 0 6px #ff0000, 0 0 9px #ff0000, 0 0 12px #ff0000, 0 0 15px #ff0000, 0 0 18px #ff0000, 0 0 21px #ff0000;
     }
-}
-
-.slide-text {
-    display: inline-block;
-    animation: pulse-glow 2s infinite;
-    color: #ffffff;
-}
-
-
-.separator {
-    border: 1px solid var(--text-color);
-    margin: 0px -15px 0px -15px;
-    border-radius: 10px;
-}
-
-.container-icons-redes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
 }
 
 
@@ -222,6 +227,46 @@ body {
     color: #ffffff;
 }
 
+
+/* CONTACT SECTION */
+
+.container-contact {
+    width: 100%;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.email-form input, .email-form textarea {
+    width: 75%;
+    padding: 10px;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    resize: none;
+}
+
+.email-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.email-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
 #me{
     min-height: calc(-80px + 100vh);
     margin-top: 80px;
@@ -235,9 +280,15 @@ body {
     height: 100vh;
 }
 
+/* 800px+ */
+
 @media (min-width: 800px) {
     .hamburger {
         display: none;
+    }
+
+    .logo {
+        margin-left: 5px;
     }
 
     .menu {
@@ -283,4 +334,9 @@ body {
     .separator {
         margin: 0px -25px 0px -25px;
     }
+
+    .email-form input, .email-form textarea {
+        width: 20%;
+    }
+
 }

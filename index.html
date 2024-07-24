@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="navbar">
-        <img src="imgs/c-logo-test.png" width="80" height="70" alt="" href="#me" onclick="smoothScroll(event, '#me')">
+        <img class="logo" src="imgs/c-logo.png" width="70" height="65" alt="" href="#me" onclick="smoothScroll(event, '#me')">
         <div class="hamburger" onclick="toggleMenu()">☰</div>
         <div class="menu" id="menu">
             <a href="#about" onclick="smoothScroll(event, '#about')">Sobre</a>
@@ -73,7 +73,13 @@
         <h1>Projetos</h1>
     </div>
     <div id="contact" class="section">
-        <h1>Contato</h1>
+        <div class="container-contact">
+            <form class="email-form" action="/send-email" method="POST">
+                <input type="subject" id="subject" placeholder="Assunto" name="subject" required>
+                <textarea id="content" placeholder="Mensagem" name="content" rows="6" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </div>
     <script src="scripts/navbar.js"></script>
 </body>
