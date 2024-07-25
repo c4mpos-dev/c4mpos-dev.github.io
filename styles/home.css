@@ -152,7 +152,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 50px;
-    margin: 15px 20px 30px 20px;
+    margin: 30px 20px 45px 20px;
 }
 
 .title-about {
@@ -160,6 +160,7 @@ body {
     flex-direction: column;
     color: var(--text-color);
 }
+
 .title-about h1{
     font-family: var(--font-roboto);
     font-size: 50px;
@@ -167,6 +168,7 @@ body {
     margin-top: 0;
     letter-spacing: 3px;
 }
+
 .title-about p {
     font-family: var(--font-edu);
     margin: 0;
@@ -195,19 +197,23 @@ body {
     color: #ffffff;
     margin: 0px 20px 20px 20px;
 }
+
 .text-about h1{
     font-size: 28px;
     margin-bottom: 20px;
 }
+
 .text-about p{
     margin: 0px 0px 10px 0px;
     display: flex;
     gap: 10px;
     font-size: 18px;
 }
+
 .text-about a button:hover {
     background-color: rgb(145, 145, 145);
 }
+
 .text-about a button{
     margin-top: 15px;
     display: inline-flex;
@@ -220,6 +226,7 @@ body {
     background-color: var(--base-color);
     border: 2px solid var(--text-color);
 }
+
 .text-about a button span{
     font-family: var(--font-roboto);
     font-size: 16px;
@@ -231,7 +238,42 @@ body {
 /* CONTACT SECTION */
 
 .container-contact {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    margin: 35px 0px 50px 0px;
+    gap: 30px;
+}
+
+.title-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.title-contact h1{
+    font-family: var(--font-roboto);
+    font-size: 50px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    letter-spacing: 3px;
+}
+
+.title-contact h2 {
+    font-family: var(--font-edu);
+    margin: 0;
+    font-size: 20px;
+}
+
+.title-contact p {
+    margin-top: 40px;
+    font-family: var(--font-roboto);
+    font-size: 16px;
+}
+
+.title-contact p strong{
+    color: #ff0000;
 }
 
 .email-form {
@@ -305,9 +347,6 @@ body {
     height: 100vh;
 }
 
-#contact {
-    height: 100vh;
-}
 
 /* 800px+ */
 
@@ -331,8 +370,27 @@ body {
         display: inline;
     }
     
+
+    /* ME SECTION */
+
+    .title-me h1{
+        font-size: 65px;
+    }
+
+    .title-me p {
+        font-size: 27px;
+        margin: 15px 0px 20px 0px;
+    }
+        
+    .separator {
+        margin: 0px -25px 0px -25px;
+    }
+
+
+    /* ABOUT SECTION */
+
     .container-about {
-        margin: 50px 0px 60px 0px;
+        margin: 60px 0px 60px 0px;
     }
 
     .card-about {
@@ -348,28 +406,26 @@ body {
     .text-about {
         margin-right: 40px;
     }
+
     .text-about a button{
         width: 350px;
     }
     
-    .title-me h1{
-        font-size: 65px;
-    }
-    .title-me p {
-        font-size: 27px;
-        margin: 15px 0px 20px 0px;
-    }
-     
-    .separator {
-        margin: 0px -25px 0px -25px;
+
+
+
+    /* CONTACT SECTION */
+
+    .container-contact {  
+        margin: 60px 0px 65px 0px;  
     }
 
     .email-form input {
-        width: 20%;
+        width: 500px;
     }
     
     .email-form textarea {
-        width: 35%;
+        width: 650px;
     }
 
     .email-form button {
