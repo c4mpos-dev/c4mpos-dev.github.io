@@ -9,8 +9,15 @@ function toggleMenu() {
 
 function smoothScroll(event, targetId) {
     event.preventDefault();
-    var target = document.querySelector(targetId);
-    var targetPosition = target.offsetTop - 80; // Subtrai 80px do topo da seção
+
+    var targetPosition;
+    if (targetId === '#me') {
+        targetPosition = 0; // Topo da página
+    } else {
+        var target = document.querySelector(targetId);
+        targetPosition = target.offsetTop - 80; // Subtrai 80px do topo da seção
+    }
+
     var startPosition = window.pageYOffset;
     var distance = targetPosition - startPosition;
     var duration = 800; // Duração da rolagem em milissegundos
@@ -26,6 +33,7 @@ function smoothScroll(event, targetId) {
         }
     });
 }
+
 
 function toggleBoxShadow() {
     var navbar = document.querySelector('.navbar');
