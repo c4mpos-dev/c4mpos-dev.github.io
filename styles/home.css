@@ -17,6 +17,8 @@ body {
     background: var(--secondary-color);
 }
 
+/* NAVBAR */
+
 .navbar-conatiner{
     display: flex;
     flex-direction: column;
@@ -79,6 +81,9 @@ body {
     text-align: center;
 }
 
+
+/* SECTIONS */
+
 .section {
     display: flex;
     flex-direction: column;
@@ -87,6 +92,7 @@ body {
     text-align: center;
     border-bottom: 1px solid var(--text-color);
 }
+
 
 /* ME SECTION */
 
@@ -335,7 +341,47 @@ body {
 }
 
 
+/* FOOTER */
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 170px;
+    background-color: rgb(20, 20, 20);
+    gap: 20px;
+}
+
+.text-footer {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-roboto);
+    color: var(--text-color);
+}
+
+.text-footer a{
+    color: inherit;
+}
+
+.text-footer h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.text-footer p{
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.icons-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
 
 #me{
@@ -413,7 +459,6 @@ body {
     
 
 
-
     /* CONTACT SECTION */
 
     .container-contact {  
@@ -433,4 +478,16 @@ body {
         height: 40px;
     }
 
+
+    /* FOOTER */
+
+    .footer {
+        flex-direction: row;
+        gap: 25%;
+        height: 130px;
+    }
+
+    .text-footer h2{
+        margin-top: 10px;
+    }
 }
