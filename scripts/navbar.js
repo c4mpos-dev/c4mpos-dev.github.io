@@ -49,3 +49,22 @@ window.addEventListener('scroll', toggleBoxShadow);
 
 // Chama a função uma vez para definir o estado inicial
 document.addEventListener('DOMContentLoaded', toggleBoxShadow);
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const element = document.querySelector(".skills-animate");
+
+    function checkVisibility() {
+        const rect = element.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            element.classList.add("visible");
+        } else if (rect.top >= window.innerHeight) {
+            element.classList.remove("visible");
+        }
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Verifica inicialmente se o elemento já está visível
+});
+

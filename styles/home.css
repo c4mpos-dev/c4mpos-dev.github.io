@@ -8,6 +8,7 @@
     --font-edu:  "Edu AU VIC WA NT Hand", cursive;
     --base-color: #424242;
     --secondary-color: linear-gradient(90deg, rgba(53,53,53,1) 0%, rgba(40,40,40,1) 50%, rgba(27,27,27,1) 100%);
+    --border-skills: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(179,179,179,1) 50%, rgba(85,85,85,1) 100%);
     --text-color: #ffffff;
 }
 
@@ -241,6 +242,85 @@ body {
 }
 
 
+/* SKILLS SECTION */
+
+.container-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    margin: 70px 0 85px 0;
+}
+
+.title-skills {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+.title-skills h1{
+    font-family: var(--font-roboto);
+    font-size: 50px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    letter-spacing: 3px;
+}
+
+.title-skills p {
+    font-family: var(--font-edu);
+    margin: 0;
+    font-size: 20px;
+}
+
+.container-skills-icon {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-animate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 85%;
+    gap: 50px;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s, opacity 1s;
+}
+
+.skills-animate.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.skill {
+    position: relative;
+    display: inline-block;
+    color: var(--text-color);
+    font-family: var(--font-kanit);
+    background-color: var(--base-color);
+    border-radius: 30px 4px 4px 4px;
+    width: 120px;
+    padding-bottom: 17px;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(179,179,179,1) 50%, rgba(85,85,85,1) 100%);
+    border-radius: 0px 0px 4px 4px;
+}
+
+
 /* CONTACT SECTION */
 
 .container-contact {
@@ -266,13 +346,13 @@ body {
     letter-spacing: 3px;
 }
 
-.title-contact h2 {
+.send-message-text {
     font-family: var(--font-edu);
     margin: 0;
     font-size: 20px;
 }
 
-.title-contact p {
+.email-text {
     margin-top: 40px;
     font-family: var(--font-roboto);
     font-size: 16px;
@@ -389,9 +469,6 @@ body {
     margin-top: 80px;
 }
 
-#projects {
-    height: 100vh;
-}
 
 
 /* 800px+ */
