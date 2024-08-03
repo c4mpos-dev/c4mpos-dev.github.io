@@ -107,6 +107,7 @@ body {
     letter-spacing: 2px;
     margin: 0;
 }
+
 .title-me p {
     font-size: 19px;
     margin: 15px 0px 20px 0px;
@@ -170,7 +171,7 @@ body {
 
 .title-about h1{
     font-family: var(--font-roboto);
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 5px;
     margin-top: 0;
     letter-spacing: 3px;
@@ -179,7 +180,7 @@ body {
 .title-about p {
     font-family: var(--font-edu);
     margin: 0;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .card-about {
@@ -250,7 +251,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 70px;
-    margin: 70px 0 85px 0;
+    margin: 50px 0 85px 0;
 }
 
 .title-skills {
@@ -261,7 +262,7 @@ body {
 
 .title-skills h1{
     font-family: var(--font-roboto);
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 5px;
     margin-top: 0;
     letter-spacing: 3px;
@@ -270,7 +271,7 @@ body {
 .title-skills p {
     font-family: var(--font-edu);
     margin: 0;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .container-skills-icon {
@@ -281,7 +282,7 @@ body {
 .skills-animate {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     width: 85%;
     gap: 50px;
     opacity: 0;
@@ -301,7 +302,7 @@ body {
     font-family: var(--font-kanit);
     background-color: var(--base-color);
     border-radius: 30px 4px 4px 4px;
-    width: 120px;
+    width: 105px;
     padding-bottom: 17px;
 }
 
@@ -340,7 +341,7 @@ body {
 
 .title-contact h1{
     font-family: var(--font-roboto);
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 5px;
     margin-top: 0;
     letter-spacing: 3px;
@@ -349,13 +350,13 @@ body {
 .send-message-text {
     font-family: var(--font-edu);
     margin: 0;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .email-text {
     margin-top: 40px;
     font-family: var(--font-roboto);
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .title-contact p strong{
@@ -515,6 +516,14 @@ body {
     .container-about {
         margin: 60px 0px 60px 0px;
     }
+  
+    .title-about h1{
+        font-size: 50px;
+    }
+    
+    .title-about p {
+        font-size: 20px;
+    }
 
     .card-about {
         flex-direction: row;
@@ -535,11 +544,45 @@ body {
     }
     
 
+    /* SKILLS SECTION */
+
+    .container-skills {
+        margin: 70px 0 85px 0;
+    }
+
+    .title-skills h1{
+        font-size: 50px;
+    }
+
+    .title-skills p {
+        font-size: 20px;
+    }
+
+    .skills-animate {
+        justify-content: flex-start;  
+    }
+
+    .skill {
+        width: 120px;
+    }
+
 
     /* CONTACT SECTION */
 
     .container-contact {  
         margin: 60px 0px 65px 0px;  
+    }
+
+    .title-contact h1{
+        font-size: 50px; 
+    }
+    
+    .send-message-text {
+        font-size: 20px;
+    }
+    
+    .email-text {
+        font-size: 16px;
     }
 
     .email-form input {
