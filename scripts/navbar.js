@@ -1,27 +1,58 @@
-function toggleMenu() {
+// Trocar display do menu
+function toggleMenu(isLogo) {
     var menu = document.getElementById("menu");
-    if (menu.style.display === "flex") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "flex";
+    var img = document.getElementById("hamburguer");
+    img.classList.add('transition');
+
+    if (isLogo == false) {
+        if (img.src.endsWith("assets/icons/interface/menu.svg")) {
+            // Troca icone hamburguer com animação de zoom
+            img.classList.add('zoom-out');
+            setTimeout(() => {
+                img.src = "assets/icons/interface/close.svg";
+                img.classList.remove('zoom-out');
+            }, 200);
+
+            // Troca as classes pro menu aparecer
+            menu.classList.add("show");
+            menu.classList.remove("hidden");
+        } else {
+            // Troca icone hamburguer com animação de zoom
+            img.classList.add('zoom-out');
+            setTimeout(() => {
+                img.src = "assets/icons/interface/menu.svg";
+                img.classList.remove('zoom-out');
+            }, 200);
+
+            // Troca as classes pro menu sumir
+            menu.classList.remove("show");
+            menu.addEventListener('transitionend', function() {
+                menu.classList.add("hidden");
+            }, { once: true });
+        }
+    }
+    else {
+        if (!img.src.endsWith("assets/icons/interface/menu.svg"))  {
+            // Troca icone hamburguer com animação de zoom
+            img.classList.add('zoom-out');
+            setTimeout(() => {
+                img.src = "assets/icons/interface/menu.svg";
+                img.classList.remove('zoom-out');
+            }, 200);
+
+            // Troca as classes pro menu sumir
+            menu.classList.remove("show");
+            menu.addEventListener('transitionend', function() {
+                menu.classList.add("hidden");
+            }, { once: true });
+        }
     }
 }
 
-function changeIcon() {
-    var img = document.getElementById("hamburguer");
-    if (img.src.endsWith("assets/icons/interface/menu.svg")) {
-        img.src = "assets/icons/interface/close.svg";
-    } else {
-        img.src = "assets/icons/interface/menu.svg";
+function smoothScroll(event, targetId, isLogo) {
+    if (window.matchMedia("(max-width: 800px)").matches) { 
+        toggleMenu(isLogo);
     }
-}
-
-function smoothScroll(event, targetId) {
-    if (window.matchMedia("(max-width: 800px)").matches) {
-        menu.style.display = "none";
-    }
-    var img = document.getElementById("hamburguer");
-    img.src = "assets/icons/interface/menu.svg";
     
     event.preventDefault();
 
@@ -49,6 +80,7 @@ function smoothScroll(event, targetId) {
     });
 }
 
+// Sumir com boxshadow no topo da página
 function toggleBoxShadow() {
     var navbar = document.querySelector('.navbar');
     if (window.pageYOffset < 10) {
@@ -65,9 +97,7 @@ window.addEventListener('scroll', toggleBoxShadow);
 document.addEventListener('DOMContentLoaded', toggleBoxShadow);
 
 
-
-
-
+// Animação das skills
 document.addEventListener("DOMContentLoaded", function() {
     const element = document.querySelector(".skills-animate");
 
@@ -83,4 +113,3 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", checkVisibility);
     checkVisibility(); // Verifica inicialmente se o elemento já está visível
 });
-

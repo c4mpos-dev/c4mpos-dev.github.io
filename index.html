@@ -9,13 +9,13 @@
 </head>
 <body>
     <header class="navbar">
-        <img class="logo" src="imgs/c-logo.png" width="70" height="65" alt="" href="#me" onclick="smoothScroll(event, '#me')">
-        <img src="assets/icons/interface/menu.svg" alt="" id="hamburguer" class="hamburguer" onclick="toggleMenu(); changeIcon();">
-        <div class="menu" id="menu">
+        <img class="logo" src="assets/imgs/c-logo.png" width="70" height="65" alt="" href="#me" onclick="smoothScroll(event, '#me', true)">
+        <img src="assets/icons/interface/menu.svg" alt="" id="hamburguer" class="hamburguer" onclick="toggleMenu(false)">
+        <div class="menu hidden" id="menu">
             <div class="container-menu">
-                <a href="#about" onclick="smoothScroll(event, '#about')">Sobre</a>
-                <a href="#skills" onclick="smoothScroll(event, '#skills')">Habilidades</a>
-                <a href="#contact" onclick="smoothScroll(event, '#contact')">Contato</a>
+                <a href="#about" onclick="smoothScroll(event, '#about', false)">Sobre</a>
+                <a href="#skills" onclick="smoothScroll(event, '#skills', false)">Habilidades</a>
+                <a href="#contact" onclick="smoothScroll(event, '#contact', false)">Contato</a>
             </div>
         </div>    
     </header>
@@ -28,13 +28,13 @@
             <div class="separator"></div>
             <div class="container-icons-redes">
                 <a  href="https://github.com/c4mpos-dev" target="_blank">
-                    <img class="icon-rede" src="imgs/github-icon.svg" alt="">
+                    <img class="icon-rede" src="assets/icons/social-media/github-icon.svg" alt="">
                 </a>
                 <a  href="https://www.instagram.com/c4mp02/" target="_blank">
-                    <img class="icon-rede" src="imgs/instagram-icon.svg" alt="">
+                    <img class="icon-rede" src="assets/icons/social-media/instagram-icon.svg" alt="">
                 </a>
                 <a  href="https://www.linkedin.com/in/cau%C3%A3-campos/" target="_blank">
-                    <img class="icon-rede" src="imgs/linkedin-icon.svg" alt="">
+                    <img class="icon-rede" src="assets/icons/social-media/linkedin-icon.svg" alt="">
                 </a>  
             </div>
         </div>
@@ -46,25 +46,25 @@
                 <p>Quem sou eu?</p>
             </div>
             <div class="card-about">
-                <img class="photo" src="imgs/photoOfMe.png" width="230" height="230" alt="">
+                <img class="photo" src="assets/imgs/photoOfMe.png" width="230" height="230" alt="">
                 <div class="text-about">
                     <h1>Cauã Campos de Souza e Silva</h1>
                     <p>
-                        <img src="imgs/age.png" width="24" height="24" alt="">
+                        <img src="assets/icons/interface/age.svg" alt="Age">
                         <span>18 anos</span>
                     </p>
                     <p>
-                        <img src="imgs/college.png" width="24" height="24" alt="">
+                        <img src="assets/icons/interface/college.svg" alt="College">
                         <span>Engenharia de Software (INATEL)</span>
                     </p>
                     <p>
-                        <img src="imgs/local.png" width="24" height="24" alt="">
+                        <img src="assets/icons/interface/location.svg" alt="Location">
                         <span>Santa Rita do Sapucaí - MG / Brasil</span>
                     </p>
-                    <a href="downloads/CurrículoCauã.pdf" download>
+                    <a href="assets/pdf/CurrículoCauã.pdf" download>
                         <button>
                             <span>Ver currículo</span>
-                            <img src="imgs/doc.png" width="15px" height="15px" alt="">
+                            <img src="assets/icons/interface/doc.svg" alt="Doc">
                         </button>
                     </a>
                 </div>     
@@ -81,55 +81,55 @@
                 <div class="skills-animate">
                     <div class="skill">       
                         <p>HTML5</p>
-                        <img src="assets/skills/html5.svg" alt="HTML5">
+                        <img src="assets/icons/skills/html5.svg" alt="HTML5">
                     </div>
                     <div class="skill">       
                         <p>CSS3</p>
-                        <img src="assets/skills/css3.svg" alt="CSS3">
+                        <img src="assets/icons/skills/css3.svg" alt="CSS3">
                     </div>
                     <div class="skill">       
                         <p>Java</p>
-                        <img src="assets/skills/java.svg" alt="Java">
+                        <img src="assets/icons/skills/java.svg" alt="Java">
                     </div>
                     <div class="skill">       
                         <p>JavaScript</p>
-                        <img src="assets/skills/js.svg" alt="JavaScript">
+                        <img src="assets/icons/skills/js.svg" alt="JavaScript">
                     </div>
                     <div class="skill">       
                         <p>Vue.js</p>
-                        <img src="assets/skills/vue.svg" alt="Vue.js">
+                        <img src="assets/icons/skills/vue.svg" alt="Vue.js">
                     </div>
                     <div class="skill">       
                         <p>Tailwind CSS</p>
-                        <img src="assets/skills/tailwind.svg" alt="Tailwind CSS">
+                        <img src="assets/icons/skills/tailwind.svg" alt="Tailwind CSS">
                     </div>
                     <div class="skill">       
                         <p>C#</p>
-                        <img src="assets/skills/csharp.svg" alt="C#">
+                        <img src="assets/icons/skills/csharp.svg" alt="C#">
                     </div>
                     <div class="skill">       
                         <p>C++</p>
-                        <img src="assets/skills/cpp.svg" alt="C++">
+                        <img src="assets/icons/skills/cpp.svg" alt="C++">
                     </div>
                     <div class="skill">       
                         <p>C</p>
-                        <img src="assets/skills/c.svg" alt="C">
+                        <img src="assets/icons/skills/c.svg" alt="C">
                     </div>
                     <div class="skill">       
                         <p>Python</p>
-                        <img src="assets/skills/python.svg" alt="Python">
+                        <img src="assets/icons/skills/python.svg" alt="Python">
                     </div>
                     <div class="skill">       
                         <p>Figma</p>
-                        <img src="assets/skills/figma.svg" alt="Figma">
+                        <img src="assets/icons/skills/figma.svg" alt="Figma">
                     </div>
                     <div class="skill">       
                         <p>MySQL</p>
-                        <img src="assets/skills/mysql.svg" alt="MySQL">
+                        <img src="assets/icons/skills/mysql.svg" alt="MySQL">
                     </div>
                     <div class="skill">       
                         <p>Unity</p>
-                        <img src="assets/skills/unity.svg" alt="Unity">
+                        <img src="assets/icons/skills/unity.svg" alt="Unity">
                     </div>
                 </div>
             </div>
@@ -147,29 +147,27 @@
                 <textarea id="content" placeholder="Mensagem" name="content" rows="6" required></textarea>
                 <button type="submit">
                     <span>Enviar</span>
-                    <img src="imgs/send-icon.png" width="22px" height="22px" alt="">
+                    <img src="assets/icons/interface/send-email.svg" width="22px" height="22px" alt="">
                 </button>
             </form>
         </div>
     </div>
     <footer class="footer">
-        
         <div class="text-footer">
             <h2>Feito por <a href="https://github.com/c4mpos-dev">Cauã Campos</a></h2>
             <p>Todos os direitos reservados</p>
         </div>
         <div class="icons-footer">
             <a  href="https://github.com/c4mpos-dev" target="_blank">
-                <img class="icon-rede-github" src="imgs/github-icon.svg" alt="">
+                <img class="icon-rede-github" src="assets/icons/social-media/github-icon.svg" alt="">
             </a>
             <a  href="https://www.instagram.com/c4mp02/" target="_blank">
-                <img class="icon-rede-instagram" src="imgs/instagram-icon.svg" alt="">
+                <img class="icon-rede-instagram" src="assets/icons/social-media/instagram-icon.svg" alt="">
             </a>
             <a  href="https://www.linkedin.com/in/cau%C3%A3-campos/" target="_blank">
-                <img class="icon-rede-linkedin" src="imgs/linkedin-icon.svg" alt="">
+                <img class="icon-rede-linkedin" src="assets/icons/social-media/linkedin-icon.svg" alt="">
             </a>  
         </div>
-        
     </footer>
     <script src="scripts/navbar.js"></script>
 </body>
