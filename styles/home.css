@@ -93,7 +93,6 @@ img.transition.zoom-out {
     transform: scale(0);
 }
 
-
 .container-menu {
     margin-top: 80px;
 }
@@ -491,6 +490,18 @@ img.transition.zoom-out {
 #me{
     min-height: calc(-80px + 100vh);
     margin-top: 80px;
+}
+
+/* 367px- */
+
+@media (max-width: 367px) {
+
+    /* ABOUT SECTION */
+
+    .text-about p{
+        font-size: 15px;
+    }
+
 }
 
 
