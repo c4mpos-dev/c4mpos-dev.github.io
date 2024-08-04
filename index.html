@@ -10,12 +10,14 @@
 <body>
     <header class="navbar">
         <img class="logo" src="imgs/c-logo.png" width="70" height="65" alt="" href="#me" onclick="smoothScroll(event, '#me')">
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <img src="assets/icons/interface/menu.svg" alt="" id="hamburguer" class="hamburguer" onclick="toggleMenu(); changeIcon();">
         <div class="menu" id="menu">
-            <a href="#about" onclick="smoothScroll(event, '#about')">Sobre</a>
-            <a href="#skills" onclick="smoothScroll(event, '#skills')">Habilidades</a>
-            <a href="#contact" onclick="smoothScroll(event, '#contact')">Contato</a>
-        </div>
+            <div class="container-menu">
+                <a href="#about" onclick="smoothScroll(event, '#about')">Sobre</a>
+                <a href="#skills" onclick="smoothScroll(event, '#skills')">Habilidades</a>
+                <a href="#contact" onclick="smoothScroll(event, '#contact')">Contato</a>
+            </div>
+        </div>    
     </header>
     <div id="me" class="section">
         <div class="container-me">

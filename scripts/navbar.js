@@ -7,7 +7,22 @@ function toggleMenu() {
     }
 }
 
+function changeIcon() {
+    var img = document.getElementById("hamburguer");
+    if (img.src.endsWith("assets/icons/interface/menu.svg")) {
+        img.src = "assets/icons/interface/close.svg";
+    } else {
+        img.src = "assets/icons/interface/menu.svg";
+    }
+}
+
 function smoothScroll(event, targetId) {
+    if (window.matchMedia("(max-width: 800px)").matches) {
+        menu.style.display = "none";
+    }
+    var img = document.getElementById("hamburguer");
+    img.src = "assets/icons/interface/menu.svg";
+    
     event.preventDefault();
 
     var targetPosition;
@@ -34,7 +49,6 @@ function smoothScroll(event, targetId) {
     });
 }
 
-
 function toggleBoxShadow() {
     var navbar = document.querySelector('.navbar');
     if (window.pageYOffset < 10) {
@@ -49,6 +63,8 @@ window.addEventListener('scroll', toggleBoxShadow);
 
 // Chama a função uma vez para definir o estado inicial
 document.addEventListener('DOMContentLoaded', toggleBoxShadow);
+
+
 
 
 
