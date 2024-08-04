@@ -20,11 +20,6 @@ body {
 
 /* NAVBAR */
 
-.navbar-conatiner{
-    display: flex;
-    flex-direction: column;
-}
-
 .navbar {
     display: flex;
     position: fixed;
@@ -54,11 +49,12 @@ body {
     background-color: var(--base-color);
 }
 
-.hamburger {
+.hamburguer {
     display: block;
     cursor: pointer;
     font-size: 1.5em;
     color: var(--text-color);
+    margin-right: 15px;
 }
 
 .logo {
@@ -69,15 +65,21 @@ body {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 80px; /* navbar tem 60 */
-    right: 0;
-    width: 50%;
-    background-color: var(--secondary-color);
+    align-items: center;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background: rgba(20, 20, 20, 0.8);
     border-radius: 0px 0px 10px 10px;
-    margin-right: 20px;
+    z-index: -1;
+}
+
+.container-menu {
+    margin-top: 80px;
 }
 
 .menu a {
+    font-size: 20px;
     display: block;
     text-align: center;
 }
@@ -471,11 +473,12 @@ body {
 }
 
 
-
 /* 800px+ */
 
 @media (min-width: 800px) {
-    .hamburger {
+    /* NAVBAR   */
+
+    .hamburguer {
         display: none;
     }
 
@@ -489,9 +492,16 @@ body {
         position: static;
         width: auto;
         background-color: transparent;
+        margin-right: 20px;
     }
+
+    .container-menu {
+        margin-top: 0px;
+    }
+
     .menu a {
         display: inline;
+        font-size: 18px;
     }
     
 
