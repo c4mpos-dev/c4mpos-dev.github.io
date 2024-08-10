@@ -4,6 +4,8 @@
 })();
 
 function showNotification(message, type) {
+    var notification = document.getElementById('notification');
+
     notification.textContent = message;
     notification.className = `notification ${type}`;
     notification.style.transition = 'transform 0.5s ease';
@@ -20,7 +22,6 @@ function showNotification(message, type) {
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('email-form');
     var loadingOverlay = document.getElementById('loading');
-    var notification = document.getElementById('notification');
 
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Evita o comportamento padrão de envio do formulário
@@ -39,5 +40,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.classList.remove('no-scroll'); // Libera o scroll
             });
     });
-
 });

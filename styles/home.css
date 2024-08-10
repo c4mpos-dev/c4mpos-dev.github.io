@@ -521,7 +521,7 @@ img.transition.zoom-out {
     font-family: var(--font-roboto);
     display: block;
     position: fixed;
-    top: 12%;
+    top: 100px;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
