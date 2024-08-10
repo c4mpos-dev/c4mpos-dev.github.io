@@ -113,3 +113,29 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", checkVisibility);
     checkVisibility(); // Verifica inicialmente se o elemento já está visível
 });
+
+
+const banner = document.querySelector('.card-about');
+
+banner.addEventListener('mousemove', (e) => {
+    const rect = banner.getBoundingClientRect();
+    const x = e.clientX - rect.left; // posição X do mouse dentro da div
+    const y = e.clientY - rect.top;  // posição Y do mouse dentro da div
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = (centerY - y) / 40; // ajusta a intensidade da rotação
+    const rotateY = (x - centerX) / 40;
+
+    banner.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+});
+
+banner.addEventListener('mouseleave', () => {
+    banner.style.transition = 'transform 0.5s ease'; // Transição suave ao sair
+    banner.style.transform = 'rotateX(0) rotateY(0)';
+});
+
+banner.addEventListener('mouseenter', () => {
+    banner.style.transition = 'transform 0.2s ease'; // Remove a transição para movimentos do mouse
+});
