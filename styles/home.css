@@ -113,7 +113,29 @@ img.transition.zoom-out {
     align-items: center;
     text-align: center;
     border-bottom: 1px solid var(--text-color);
+    position: relative;
 }
+
+.arrow-down {
+    position: absolute;
+    bottom: 40px;
+    animation: bounce 0.8s infinite;
+}
+
+.arrow-down:hover {
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(-35%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
 
 
 /* ME SECTION */
