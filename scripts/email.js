@@ -1,6 +1,5 @@
-// Inicializa o EmailJS com o seu User ID
 (function(){
-    emailjs.init("-hjOau9iUZtxNFkXG"); // Substitua YOUR_USER_ID pelo seu user ID do EmailJS
+    emailjs.init("-hjOau9iUZtxNFkXG"); // Meu user ID do EmailJS
 })();
 
 function showNotification(message, type) {
@@ -16,28 +15,28 @@ function showNotification(message, type) {
         notification.style.transition = 'transform 0.5s ease';
         notification.style.transform = 'scale(0)';
     }, 2000); 
-    
 }
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var form = document.getElementById('email-form');
     var loadingOverlay = document.getElementById('loading');
 
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Evita o comportamento padrão de envio do formulário
+        event.preventDefault();
 
-        loadingOverlay.style.display = 'block'; // Exibe a tela de loading
-        document.body.classList.add('no-scroll'); // Bloqueia o scroll
+        loadingOverlay.style.display = 'block';
+        document.body.classList.add('no-scroll');
 
-        emailjs.sendForm('service_73zdw4j', 'template_wf9dp3x', form)
+        emailjs.sendForm('service_73zdw4j', 'template_wf9dp3x', form) // Dados do serviço e template do EmailJS
             .then(function() {
                 showNotification('E-mail enviado com sucesso!', 'success');
-                loadingOverlay.style.display = 'none'; // Oculta a tela de loading
-                document.body.classList.remove('no-scroll'); // Libera o scroll
+                loadingOverlay.style.display = 'none';
+                document.body.classList.remove('no-scroll');
             }, function(error) {
                 showNotification('Erro ao enviar e-mail, tente novamente.', 'error');
-                loadingOverlay.style.display = 'none'; // Oculta a tela de loading
-                document.body.classList.remove('no-scroll'); // Libera o scroll
+                loadingOverlay.style.display = 'none';
+                document.body.classList.remove('no-scroll');
             });
     });
 });

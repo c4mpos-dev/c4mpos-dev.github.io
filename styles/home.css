@@ -61,6 +61,10 @@ body {
     margin-left: 5px;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -589,10 +593,6 @@ img.transition.zoom-out {
 
     .hamburguer {
         display: none;
-    }
-
-    .logo {
-        margin-left: 5px;
     }
 
     .menu {
