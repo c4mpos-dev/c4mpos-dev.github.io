@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Cauã Campos</title>
-    <link rel="shortcut icon" type="imagex/png" href="imgs/c-logo.png">
+    <title>Cauã Campos</title>
+    <link rel="shortcut icon" type="imagex/png" href="assets/imgs/c-logo.png">
     <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
     <header class="navbar">
-        <img class="logo" src="assets/imgs/c-logo.png" width="70" height="65" alt="" href="#me" onclick="smoothScroll(event, '#me', true)">
+        <img class="logo" src="assets/imgs/c-logo.png" width="70" height="65" alt="" href="#me" onclick="smoothScroll(event, '#me', true); changeTitle()">
         <img src="assets/icons/interface/menu.svg" alt="" id="hamburguer" class="hamburguer" onclick="toggleMenu(false)">
         <div class="menu hidden" id="menu">
             <div class="container-menu">
-                <a href="#about" onclick="smoothScroll(event, '#about', false)">Sobre</a>
-                <a href="#skills" onclick="smoothScroll(event, '#skills', false)">Habilidades</a>
-                <a href="#contact" onclick="smoothScroll(event, '#contact', false)">Contato</a>
+                <a href="#about" onclick="smoothScroll(event, '#about', false); changeTitle('about')">Sobre</a>
+                <a href="#skills" onclick="smoothScroll(event, '#skills', false); changeTitle('skills')">Habilidades</a>
+                <a href="#contact" onclick="smoothScroll(event, '#contact', false); changeTitle('contact')">Contato</a>
             </div>
         </div>    
     </header>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="arrow-down">
-            <img src="assets/icons/interface/arrow-down.svg" alt="Arrow Down" onclick="smoothScroll(event, '#about', true)">
+            <img src="assets/icons/interface/arrow-down.svg" alt="Arrow Down" onclick="smoothScroll(event, '#about', true); changeTitle('about')">
         </div>
     </div>
     <div id="about" class="section">
@@ -179,6 +179,7 @@
     </footer>
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="scripts/email.js"></script>
-    <script src="scripts/navbar.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/utilities.js"></script>
 </body>
 </html>
