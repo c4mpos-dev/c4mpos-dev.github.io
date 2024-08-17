@@ -1,7 +1,7 @@
 const config = require('./config'); // Importa o arquivo de configuração
 
 (function(){
-    emailjs.init(config.EMAILJS_SERVICE_ID); // Substitua YOUR_USER_ID pelo seu user ID do EmailJS
+    emailjs.init("-hjOau9iUZtxNFkXG"); // Substitua YOUR_USER_ID pelo seu user ID do EmailJS
 })();
 
 function showNotification(message, type) {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	
         document.addEventListener('DOMContentLoaded', function() {
 
-            emailjs.sendForm(config.EMAILJS_SERVICE_ID, config.EMAILJS_TEMPLATE_ID, form)
+            emailjs.sendForm('service_73zdw4j', 'template_wf9dp3x', form)
                 .then(function() {
                     showNotification('E-mail enviado com sucesso!', 'success');
                     loadingOverlay.style.display = 'none'; // Oculta a tela de loading
