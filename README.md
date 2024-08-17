@@ -20,12 +20,14 @@ Este portfólio foi desenvolvido utilizando HTML, CSS e JavaScript puro, sem fra
 - **CSS3:** Estilização e design responsivo.
 - **JavaScript:** Interatividade e animações.
 
-## 🚀 Funcionalidades- Design responsivo que se adapta a diferentes tamanhos de tela.
+## 🚀 Funcionalidades
+- Design responsivo que se adapta a diferentes tamanhos de tela.
 - Animações em elementos HTML para uma experiência mais dinâmica.
 - Menu hambúrguer com animação de abertura e fechamento.
 - Banner interativo com efeito de profundidade baseado no movimento do mouse.
 
-## 📦 Versão-**Versão 1:** Lançamento inicial do portfólio.
+## 📦 Versão
+- **Versão 1:** Lançamento inicial do portfólio.
 
 ## 📧 Contato
 
