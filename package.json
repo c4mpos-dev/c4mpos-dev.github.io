@@ -2,7 +2,7 @@
   "name": "c4mpos-dev.github.io",
   "version": "1.0.0",
   "description": "Bem-vindo ao meu portfólio online! Este site foi desenvolvido para apresentar um pouco sobre mim, meus projetos e como me encontrar.",
-  "main": "email.js",
+  "main": "scripts/index.js",
   "scripts": {
     "start": "node email.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "dotenv": "^16.4.5",
+    "emailjs-com": "^3.2.1",
     "express": "^4.19.2"
   }
 }

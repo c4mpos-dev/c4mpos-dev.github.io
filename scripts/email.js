@@ -1,13 +1,3 @@
-require('dotenv').config();
-
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 3000;
-
-(function(){
-    emailjs.init(process.env.EMAILJS_USER_ID);
-})();
-
 function showNotification(message, type) {
     var notification = document.getElementById('notification');
 
@@ -24,25 +14,38 @@ function showNotification(message, type) {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var form = document.getElementById('email-form');
-    var loadingOverlay = document.getElementById('loading');
+var form = document.getElementById('email-form');
+var loadingOverlay = document.getElementById('loading');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
 
-        loadingOverlay.style.display = 'block';
-        document.body.classList.add('no-scroll');
+document.getElementById('email-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        emailjs.sendForm(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, form)
-            .then(function() {
-                showNotification('E-mail enviado com sucesso!', 'success');
-                loadingOverlay.style.display = 'none';
-                document.body.classList.remove('no-scroll');
-            }, function() {
-                showNotification('Erro ao enviar e-mail, tente novamente.', 'error');
-                loadingOverlay.style.display = 'none';
-                document.body.classList.remove('no-scroll');
-            });
+    loadingOverlay.style.display = 'block';
+    document.body.classList.add('no-scroll');
+
+    const formData = new FormData(this);
+    
+    fetch('/send-email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: formData.get('name'),
+            subject: formData.get('subject'),
+            content: formData.get('content')
+        })
+    })
+    .then(response => response.text())
+    .then(data => {
+        showNotification('E-mail enviado com sucesso!', 'success');
+        loadingOverlay.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    })
+    .catch(error => {
+        showNotification('Erro ao enviar e-mail, tente novamente.', 'error');
+        loadingOverlay.style.display = 'none';
+        document.body.classList.remove('no-scroll');
     });
 });
