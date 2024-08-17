@@ -1,5 +1,12 @@
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Acessar a variável de ambiente definida no Vercel
+const emailJsUserId = process.env.EMAILJS_USER_ID;
+
 (function(){
-    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_USER_ID);
+    emailjs.init(process.env.EMAILJS_USER_ID);
 })();
 
 function showNotification(message, type) {
@@ -28,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingOverlay.style.display = 'block';
         document.body.classList.add('no-scroll');
 
-        emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, form)
+        emailjs.sendForm(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, form)
             .then(function() {
                 showNotification('E-mail enviado com sucesso!', 'success');
                 loadingOverlay.style.display = 'none';

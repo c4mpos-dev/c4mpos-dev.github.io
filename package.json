@@ -1,0 +1,16 @@
+{
+  "name": "c4mpos-dev.github.io",
+  "version": "1.0.0",
+  "description": "Bem-vindo ao meu portfólio online! Este site foi desenvolvido para apresentar um pouco sobre mim, meus projetos e como me encontrar.",
+  "main": "email.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
