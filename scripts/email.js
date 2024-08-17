@@ -1,9 +1,8 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
-
-// Acessar a variável de ambiente definida no Vercel
-const emailJsUserId = process.env.EMAILJS_USER_ID;
 
 (function(){
     emailjs.init(process.env.EMAILJS_USER_ID);
@@ -40,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 showNotification('E-mail enviado com sucesso!', 'success');
                 loadingOverlay.style.display = 'none';
                 document.body.classList.remove('no-scroll');
-            }, function(error) {
+            }, function() {
                 showNotification('Erro ao enviar e-mail, tente novamente.', 'error');
                 loadingOverlay.style.display = 'none';
                 document.body.classList.remove('no-scroll');
