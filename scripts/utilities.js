@@ -42,6 +42,7 @@ card.addEventListener('mouseenter', () => {
 
 
 function changeTitle(section) {
+    console.log(section)
     switch (section) {
         case "about":
             document.title = "Cauã Campos | Sobre";
@@ -51,6 +52,7 @@ function changeTitle(section) {
             break;
         case "contact":
             document.title = "Cauã Campos | Contato";
+            break;
         default:
             document.title = "Cauã Campos";
     }
