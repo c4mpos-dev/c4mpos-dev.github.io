@@ -10,15 +10,15 @@ Você pode acessar meu portfólio através do link: [c4mpos-dev-github-io.vercel
 
 Este portfólio foi desenvolvido utilizando HTML, CSS e JavaScript puro, sem frameworks. Ele contém:
 
--**Me:** Minhas redes sociais.
--**Sobre:** Um breve resumo sobre mim.
--**Habilidades:** Uma seção com algumas ferramentas que tenho conhecimento.
--**Contatos:** Um formulário para mandar um email diretamente para mim.
+- **Me:** Minhas redes sociais.
+- **Sobre:** Um breve resumo sobre mim.
+- **Habilidades:** Uma seção com algumas ferramentas que tenho conhecimento.
+- **Contatos:** Um formulário para mandar um email diretamente para mim.
 
 ## 🛠️ Tecnologias Utilizadas
--**HTML5:** Estruturação das páginas.
--**CSS3:** Estilização e design responsivo.
--**JavaScript:** Interatividade e animações.
+- **HTML5:** Estruturação das páginas.
+- **CSS3:** Estilização e design responsivo.
+- **JavaScript:** Interatividade e animações.
 
 ## 🚀 Funcionalidades- Design responsivo que se adapta a diferentes tamanhos de tela.
 - Animações em elementos HTML para uma experiência mais dinâmica.
@@ -31,4 +31,4 @@ Este portfólio foi desenvolvido utilizando HTML, CSS e JavaScript puro, sem fra
 
 Se você quiser saber mais ou entrar em contato, você pode me encontrar em:
 
--**LinkedIn:** [Cauã Campos](https://www.linkedin.com/in/cau%C3%A3-campos/)
+- **LinkedIn:** [Cauã Campos](https://www.linkedin.com/in/cau%C3%A3-campos/)
