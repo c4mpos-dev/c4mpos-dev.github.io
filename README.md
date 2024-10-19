@@ -4,7 +4,7 @@ Bem-vindo ao meu portfólio online! Este site foi desenvolvido para apresentar u
 
 ## 🌐 Visite o Site
 
-Você pode acessar meu portfólio através do link: [c4mpos-dev-github-io.vercel.app](https://c4mpos-dev-github-io.vercel.app/)
+Você pode acessar meu portfólio através do link: [c4mpos-dev.github.io](https://c4mpos-dev.github.io/)
 
 ## 📋 Descrição
 
